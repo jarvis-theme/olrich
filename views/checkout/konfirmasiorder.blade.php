@@ -98,13 +98,13 @@
             </div>
             <div class="container">
                 <div class="col-md-9">
-                @if($order->jenisPembayaran==1)
+                @if($order->jenisPembayaran==1 && $order->status == 0)
                     @if($checkouttype==1)   
                     {{-- */ $konfirmasi = 'konfirmasiorder/' /* --}}
                     @else                         
                     {{-- */ $konfirmasi = 'konfirmasipreorder/' /* --}}
                     @endif
-                    {{Form::open(array('url'=> $konfirmasi.$order->id, 'method'=>'put', 'class'=> 'form-horizontal'))}}                            
+                    {{Form::open(array('url'=> $konfirmasi.$order->id, 'method'=>'put', 'class'=> 'form-horizontal'))}}
                         <div class="form-group">
                             <label  class="control-label"> Nama Pengirim:</label>
                             <input type="text" class="form-control" id="search" placeholder="Nama Pengirim" name='nama' required>
@@ -125,7 +125,7 @@
                         <div class="form-group">
                             <label class="control-label"> Jumlah:</label>
                             @if($checkouttype==1)        
-                            <input type="text" class="form-control" id="search" placeholder="jumlah yg terbayar" name='jumlah' value='{{$order->total}}' required>
+                            <input type="text" class="form-control" id="search" placeholder="Jumlah Transfer" name='jumlah' value='{{$order->total}}' required>
                             @else
                                 @if($order->status < 2)
                                 <input class="form-control" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->dp}}' required>
@@ -134,7 +134,7 @@
                                 @endif
                             @endif
                         </div>
-                        <button type="submit" class="form-group btn btn-info">Konfirmasi Order</button>
+                        <button type="submit" class="form-group btn btn-info">Konfirmasi Pembayaran</button>
                     {{Form::close()}}
                 @endif
             </div>

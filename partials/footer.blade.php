@@ -40,23 +40,23 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="client">
 					@foreach(list_banks() as $value)	
-					<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" class="img-responsive logo-bank" title="Payment" />
+					<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" class="img-responsive logo-bank" title="{{$value->bankdefault->nama}}" />
 					@endforeach	
 					@if(count(list_payments()) > 0)
 						@foreach(list_payments() as $pay)
 							@if($pay->nama == 'paypal' && $pay->aktif == 1)
-							<img src="{{url('img/bank/paypal.png')}}" alt="Paypal" class="img-responsive logo-bank" title="Payment" />
+							<img src="{{url('img/bank/paypal.png')}}" alt="Paypal" class="img-responsive logo-bank" title="Paypal" />
 							@endif
 							@if($pay->nama == 'ipaymu' && $pay->aktif == 1)
-							<img src="{{url('img/bank/ipaymu.jpg')}}" alt="support ipaymu" class="img-responsive logo-bank" title="Payment" />
+							<img src="{{url('img/bank/ipaymu.jpg')}}" alt="support ipaymu" class="img-responsive logo-bank" title="Ipaymu" />
 							@endif
                             @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                            <img src="{{url('img/bitcoin.png')}}" alt="bitcoin" title="Payment" />
+                            <img src="{{url('img/bitcoin.png')}}" alt="bitcoin" title="Bitcoin" />
                             @endif
 						@endforeach
 					@endif
 					@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-					<img src="{{url('img/bank/doku.jpg')}}" alt="support doku myshortcart" class="img-responsive logo-bank" title="Payment" />
+					<img src="{{url('img/bank/doku.jpg')}}" alt="support doku myshortcart" class="img-responsive logo-bank" title="Doku" />
 					@endif
 				</div>
 			</div>

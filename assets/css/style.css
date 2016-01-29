@@ -575,7 +575,7 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
    border-top:1px solid #f1f1f1;
    border-bottom:1px solid #f1f1f1;
    margin:14px 0px;
-   padding:5px 8px;
+   padding:5px 8px 5px 0;
    color:#777;
    text-transform:uppercase;
    font-size:11px
@@ -608,7 +608,8 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 }
 
 .blog .entry p{
-    margin: 0px 0px 4px 0px
+    margin: 0px 0px 4px 0px;
+    padding: 0px;
 }
 
 .blog .post-foot{
@@ -1102,7 +1103,8 @@ footer  i.contact-icon{
 }
 
 footer .address p{
-   margin-bottom:6px
+   margin-bottom:6px;
+   padding: 0
 }
 
 footer .copy{
@@ -1330,7 +1332,7 @@ footer .copy{
    .img-product{margin: auto}
 }
 .client { text-align: center; }
-.logo-bank {margin: 0 5px; padding-top: 5px; display: inline-block !important}
+.logo-bank {margin: 0 5px; margin-top: 5px; display: inline-block !important; border-radius: 5px}
 .center{ text-align: center }
 #title-banner{margin-left: 0}
 .order-detail{margin-left: 8px}
@@ -1339,7 +1341,7 @@ footer .copy{
 #harga{width:auto;padding: 0 3px}
 #side-nav{text-decoration: none}
 #img-home1{width:auto}
-#desc-product{min-height: 80px}
+#desc-product{min-height: 80px;padding: 0}
 #new-item{min-height:320px}
 #forget{font-size: smaller;float: right}
 #product-item{height: 380px}
@@ -1352,3 +1354,17 @@ footer .copy{
 #title-head{width: auto}#url-head{float: right}.topmenu{float:right}
 .align-left{text-align: left}.subscribes{margin: 0 20px}
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{background-color: #858585;border-color: #858585}
+.about-us p, #myTabContent p{padding: 0}
+@media screen and (max-width: 360px){
+  .item-details .pull-right{
+    float: none !important;
+    text-align: center;
+  }
+  .item-details #harga{
+    float: none !important;
+    text-align: center;
+  }
+  .shop-items .item-price{
+    display: inherit;
+  }
+}
