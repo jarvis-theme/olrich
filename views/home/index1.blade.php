@@ -3,8 +3,9 @@
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">
 				<div class="row">
+					{{-- */ $i = 1 /* --}}
 					@foreach(home_product() as $myproduk)
-					<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="col-md-4 col-sm-4 col-xs-6">
 						<div class="item">
 							@if(is_outstok($myproduk))
 							<div class="item-icon"><span class="label label-default">KOSONG</span></div>
@@ -32,6 +33,10 @@
 							</div>
 						</div>
 					</div>
+					@if($i % 2 == 0)
+					<div class="clearfix visible-xs"></div>
+					@endif
+					{{-- */ $i++ /* --}}
 					@endforeach
 				</div>
 				<div class="row">

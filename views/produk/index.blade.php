@@ -12,6 +12,7 @@
                         {{breadcrumbProduk(@$produk,' <li>/</li> ;',';',true,@$category,@$collection)}}
                     </ul>
                     <div class="row">
+                        {{-- */ $i = 1 /* --}}
                         @foreach(list_product(null,@$category,@$collection) as $myproduk)
                         <div class="col-md-4 col-sm-4 col-xs-6">
                             <div class="item">
@@ -28,7 +29,7 @@
                                     </a>
                                 </div>
                                 <div class="item-details">
-                                    <h5 id="title-desc"><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama,20)}}</a></h5>
+                                    <h5><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama,20)}}</a></h5>
                                     <div class="clearfix"></div>
                                     <p id="desc-product">{{short_description($myproduk->deskripsi,100)}}</p>
                                     <hr />
@@ -40,6 +41,10 @@
                                 </div>
                             </div>
                         </div>
+                        @if($i % 2 == 0)
+                        <div class="clearfix visible-xs"></div>
+                        @endif
+                        {{-- */ $i++ /* --}}
                         @endforeach 
                     </div>
 

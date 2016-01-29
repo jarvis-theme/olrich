@@ -1,8 +1,9 @@
 <div class="shop-items blocky">
     <div class="container">
         <div class="row">
+            {{-- */ $i = 1 /* --}}
             @foreach(home_product() as $key=>$myproduk)
-            <div class="col-md-3 col-sm-4 col-xs-12" id="home-product">
+            <div class="col-md-3 col-sm-4 col-xs-6" id="home-product">
                 <div class="item">
                     @if(is_outstok($myproduk))
                     <div class="item-icon"><span class="label label-default">KOSONG</span></div>
@@ -17,7 +18,7 @@
                         </a>
                     </div>
                     <div class="item-details">
-                        <h5 id="title-desc"><a href="{{product_url($myproduk)}}">{{short_description($myproduk->nama,40)}}</a></h5>
+                        <h5><a href="{{product_url($myproduk)}}">{{short_description($myproduk->nama,40)}}</a></h5>
                         <div class="clearfix"></div>
                         <!-- Para. Note more than 2 lines. -->
                         <p id="desc-product">{{shortDescription($myproduk->deskripsi,100)}}</p>
@@ -30,6 +31,10 @@
                     </div>
                 </div>
             </div>
+            @if($i % 2 == 0)
+            <div class="clearfix visible-xs"></div>
+            @endif
+            {{-- */ $i++ /* --}}
             @endforeach
         </div>
     </div>

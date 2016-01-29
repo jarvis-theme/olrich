@@ -331,12 +331,12 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 }*/
 
 .shop-items .item-image{
-    min-height: 150px
+    min-height: 100px
 }
 
 .shop-items .item-image img{
   padding: 5px 2px;
-  height: 165px;
+  /*height: 165px;*/
   width: auto;
   display: block;
   margin: 0 auto
