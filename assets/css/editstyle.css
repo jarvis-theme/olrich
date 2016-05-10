@@ -1004,8 +1004,8 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 
 .totop {
     position: fixed;
-    bottom: 50px;
-    right: 0px;
+    bottom: 0px;
+    right: 20px;
     z-index: 104400;
     background: #e0aa16;
 }
@@ -1352,3 +1352,4 @@ footer .copy{
 #title-head{width: auto}#url-head{float: right}.topmenu{float:right}
 .align-left{text-align: left}.subscribes{margin: 0 20px}
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{background-color: #e0aa16;border-color: #e0aa16}
+.coret { text-decoration : line-through; }
