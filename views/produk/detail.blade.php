@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-md-9 col-md-push-3">
 					<ul class="breadcrumb">
-        				{{breadcrumbProduk(@$produk,'; <span>/</span> ',';',true)}}
+						{{breadcrumbProduk(@$produk,'; <span>/</span> ',';',true)}} 
 					</ul>
 			
 					<div class="single-item" id="product-item">
@@ -90,12 +90,12 @@
 						</div>
 						<div class="tab-pane fade" id="tab2">
 							<div class="item-review">
-								{{ pluginComment(product_url($produk)) }}
-							</div>					
+								{{ pluginComment(product_url($produk), @$produk) }}
+							</div>
 						</div>
 					</div>
 				</div>
-			   
+			
 				<div class="col-md-3 col-md-pull-9">
 					<div class="sidey">
 						<ul class="nav">
@@ -143,15 +143,15 @@
 						@endforeach
 					</div>
 					<br>
-                    <div class="form">
-                        <form action="{{url('search')}}" method="post" class="form-inline" role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="search" name="search" placeholder="Cari Produk" required>
-                                <button type="submit" class="btn btn-info">Cari</button>
-                            </div> 
-                        </form>
-                    </div>
-                    <br>
+					<div class="form">
+						<form action="{{url('search')}}" method="post" class="form-inline" role="form">
+							<div class="form-group">
+								<input type="text" class="form-control" id="search" name="search" placeholder="Cari Produk" required>
+								<button type="submit" class="btn btn-info">Cari</button>
+							</div> 
+						</form>
+					</div>
+					<br>
 				</div>
 			</div>
 			<div class="sep-bor"></div>

@@ -10,16 +10,17 @@
             <p>Silakan masukkan kode order yang mau anda cari!</p>
             @if($checkouttype==1)
             {{-- */ $konfirmasi = 'konfirmasiorder' /* --}}
-            @endif
-            @if($checkouttype==3)
+            @elseif($checkouttype==3)
             {{-- */ $konfirmasi = 'konfirmasipreorder' /* --}}
+            @else
+            {{-- */ $konfirmasi = '#' /* --}}
             @endif
             {{Form::open(array('url'=>$konfirmasi,'method'=>'post','class'=>'form-inline'))}}
         @endif
-        <div class="form-group">
-            <input type="text" class="form-control" id="search" placeholder="Kode Order" name='kodeorder' required>
-        </div>
-        <button type="submit" class="btn btn-info">Cari</button>
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" placeholder="Kode Order" name='kodeorder' required>
+            </div>
+            <button type="submit" class="btn btn-info">Cari</button>
         {{Form::close()}}
         <!--
         <div class="link-list">
