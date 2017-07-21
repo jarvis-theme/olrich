@@ -24,7 +24,7 @@
 				</div>
 			@endforeach
 			<div class="col-md-3 col-sm-3">
-				<div class="fwidget">
+				<div class="fwidget info">
 					<h4>Hubungi Kami</h4>
 					<hr />
 					<div class="address">

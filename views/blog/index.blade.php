@@ -14,7 +14,10 @@
                         <div class="entry">
                             <h2><a href="{{blog_url($value)}}">{{$value->judul}}</a></h2>
                             <div class="meta">
-                                <i class="icon-calendar"></i> {{waktuTgl($value->updated_at)}}  <i class="icon-folder-open"></i> <a href="{{url(blog_category_url($value->kategori))}}">{{$value->kategori->nama}}</a>
+                                <i class="icon-calendar"></i> {{waktuTgl($value->created_at)}}
+                                @if(!empty($value->kategori->nama))
+                                <i class="icon-folder-open"></i> <a href="{{url(blog_category_url($value->kategori))}}">{{$value->kategori->nama}}</a>
+                                @endif
                             </div>
                             <p>{{shortDescription($value->isi, 330)}}</p>
                             <a href="{{blog_url($value)}}" class="btn btn-info">Selengkapnya</a>
@@ -47,9 +50,13 @@
                         </div>
                         @if(count(vertical_banner()) > 0)
                         <div class="widget center">
-                            <!-- <h4>Banner</h4> -->
+                            {{--*/ $i=1; /*--}}
                             @foreach(vertical_banner() as $item)
-                            <a href="{{url($item->url)}}"><img src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" /></a>
+                            <div class="mb10 left">
+                                <a href="{{url($item->url)}}">
+                                    <img class="img" src="{{url(banner_image_url($item->gambar))}}" alt="{{'Info Promo '.$i++}}" />
+                                </a>
+                            </div>
                             @endforeach
                         </div>
                         @endif

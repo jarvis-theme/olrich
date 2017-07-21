@@ -6,9 +6,9 @@
 {{generate_theme_css('olrich/assets/css/animate.min.css')}} 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 @if($tema->isiCss=='')
-{{generate_theme_css('olrich/assets/css/style.css?v=001')}} 
+{{generate_theme_css('olrich/assets/css/style.css?v=002')}} 
 @else
-{{generate_theme_css('olrich/assets/css/editstyle.css')}} 
+{{generate_theme_css('olrich/assets/css/editstyle.css?v=002')}} 
 @endif
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">

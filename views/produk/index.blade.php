@@ -10,6 +10,14 @@
                 <div class="col-md-9 col-md-push-3">
                     <ul class="breadcrumb">
                         {{breadcrumbProduk(@$produk,' <li>/</li> ;',';',true,@$category,@$collection)}}
+                        <li id="search">
+                            <form action="{{url('search')}}" method="post" class="form-inline" role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Cari" required>
+                                </div>
+                                <button type="submit" class="btn btn-info">Cari</button>
+                            </form>
+                        </li>
                     </ul>
                     <div class="row">
                         {{-- */ $i = 1 /* --}}
@@ -25,7 +33,7 @@
                                 @endif
                                 <div class="item-image">
                                     <a href="{{product_url($myproduk)}}">
-                                        {{HTML::image(product_image_url($myproduk->gambar1, 'medium'), $myproduk->nama, array('class'=>"img-responsive", "id"=>"img-home1", "title"=>$myproduk->nama))}}
+                                        {{HTML::image(product_image_url($myproduk->gambar1, 'config'), $myproduk->nama, array('class'=>"img-responsive", "id"=>"img-home1", "title"=>$myproduk->nama))}}
                                     </a>
                                 </div>
                                 <div class="item-details">
@@ -104,23 +112,14 @@
                     </div>
 
                     <div class="special center">
+                        {{--*/ $i=1; /*--}}
                         @foreach(vertical_banner() as $item)
-                        <div>
+                        <div class="mb10">
                             <a href="{{url($item->url)}}">
-                                <img width="213" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" />
+                                <img src="{{url(banner_image_url($item->gambar))}}" alt="{{'Info Promo '.$i++}}" />
                             </a>
                         </div>
                         @endforeach
-                    </div>
-                    <br>
-                    <div class="form">
-                        <!-- <h5>Search</h5> -->
-                        <form action="{{url('search')}}" method="post" class="form-inline" role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="search" name="search" placeholder="Cari Produk" required>
-                                <button type="submit" class="btn btn-info">Cari</button>
-                            </div> 
-                        </form>
                     </div>
                     <br>
                 </div>

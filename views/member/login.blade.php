@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="reg-login-info">
-                    <h2>Login & nikmati kemudahan berbelanja <span class="color">!!!</span></h2>
+                    <h2>Login & nikmati kemudahan berbelanja</h2>
                     <h3>Pelanggan Baru</h3>
                     <p>Dengan membuat akun di toko kami anda dapat berbelanja dengan mudah, cepat dan dapat melihat status pesanan anda.</p><br>
                     <a href="{{url('member/create')}}" class="btn btn-danger">Daftar</a>

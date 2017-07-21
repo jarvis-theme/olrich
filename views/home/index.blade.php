@@ -3,7 +3,7 @@
         <div class="row">
             {{-- */ $i = 1 /* --}}
             @foreach(home_product() as $key=>$myproduk)
-            <div class="col-md-3 col-sm-4 col-xs-6" id="home-product">
+            <div class="col-md-3 col-sm-4 col-xs-12" id="home-product">
                 <div class="item">
                     @if(is_outstok($myproduk))
                     <div class="item-icon"><span class="label label-default">KOSONG</span></div>

@@ -1326,11 +1326,6 @@ footer .copy{
 .special {text-align: center}
 .img-product{margin: 0px}
 .sosial{margin:15px 0px 40px 0}
-
-@media (min-width: 481px) and (max-width: 639px){
-   .slides{width: 25%}
-   .img-product{margin: auto}
-}
 .client { text-align: center; }
 .logo-bank {margin: 0 5px; margin-top: 5px; display: inline-block !important; border-radius: 5px}
 .center{ text-align: center }
@@ -1373,7 +1368,36 @@ form[name="order"] > input[name="SAVE"]:hover {
 }
 .btn-pay { background: #00aee7; border: none; padding: 10px; color: #fff; border-radius: 5px }
 .btn-pay:hover { cursor: pointer; opacity: 0.7 }
+img { max-width: 100%; }
+input[name="readme"] { margin-top: 6px; }
+li#search { float: right; }
+li#search .btn { margin-top: 0; }
+.form-inline .btn { margin-top: 0; }
+#product-item .sosial .fb-share-button { top: -8px !important; }
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
 
+@media (max-width: 1100px) {
+  .container { width: 100%; }
+}
+@media (max-width: 767px) {
+  li#search > form { max-width: 350px; }
+  li#search > form > .form-group { max-width: 300px; display: inline-block; margin-bottom: 10px; }
+  li#search > form > .btn { margin-top: -4px; }
+  footer .fwidget { text-align: center; }
+  footer .info { text-align: left; }
+}
+@media (min-width: 481px) and (max-width: 639px){
+  .slides{width: 25%}
+  .img-product{margin: auto}
+}
+@media (max-width: 400px) {
+  li#search { float: none; }
+}
 @media screen and (max-width: 360px){
   .item-details .pull-right{
     float: none !important;
@@ -1382,8 +1406,16 @@ form[name="order"] > input[name="SAVE"]:hover {
   .item-details #harga{
     float: none !important;
     text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-radius: 0;
   }
+  #home-product .item-details a.btn { width: 100%; }
   .shop-items .item-price{
     display: inherit;
   }
+}
+@media (max-width: 353px) {
+  input[name="captcha"] { margin-top: 10px; }
 }

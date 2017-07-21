@@ -8,7 +8,15 @@
 			<div class="row">
 				<div class="col-md-9 col-md-push-3">
 					<ul class="breadcrumb">
-						{{breadcrumbProduk(@$produk,'; <span>/</span> ',';',true)}} 
+						{{breadcrumbProduk(@$produk,'; <span>/</span> ',';',true)}}
+						<li id="search">
+                            <form action="{{url('search')}}" method="post" class="form-inline" role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Cari" required>
+                                </div>
+                                <button type="submit" class="btn btn-info">Cari</button>
+                            </form>
+                        </li> 
 					</ul>
 			
 					<div class="single-item" id="product-item">
@@ -134,22 +142,14 @@
 						</ul>
 					</div>
 					<div class="special center">
+                        {{--*/ $i=1; /*--}}
 						@foreach(vertical_banner() as $item)
-						<div>
+						<div class="mb10">
 							<a href="{{url($item->url)}}">
-								<img width="213" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" />
+								<img src="{{url(banner_image_url($item->gambar))}}" alt="{{'Info Promo '.$i++}}" />
 							</a>
 						</div>
 						@endforeach
-					</div>
-					<br>
-					<div class="form">
-						<form action="{{url('search')}}" method="post" class="form-inline" role="form">
-							<div class="form-group">
-								<input type="text" class="form-control" id="search" name="search" placeholder="Cari Produk" required>
-								<button type="submit" class="btn btn-info">Cari</button>
-							</div> 
-						</form>
 					</div>
 					<br>
 				</div>

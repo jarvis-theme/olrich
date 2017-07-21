@@ -72,10 +72,11 @@
 				</div>
 				<div class="sidebar-items">{{pluginSidePowerup()}}</div>
 				<div class="special">
+					{{-- */ $j = 1 /* --}}
 					@foreach(vertical_banner() as $item)
-					<div>
+					<div class="mb10">
 						<a href="{{url($item->url)}}">
-							<img width="213" align="middle" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" />
+							<img align="middle" src="{{url(banner_image_url($item->gambar))}}" alt="{{'Info Promo '.$j++}}" />
 						</a>
 					</div>
 					@endforeach
